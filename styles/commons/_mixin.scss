@@ -1,0 +1,23 @@
+@mixin border-guide{
+    border: 2px solid yellow;
+}
+
+@mixin remove-link-style{
+        text-decoration: none;
+    
+        &:visited, &:hover,  &:active{
+            color:$white;
+            background: $secondary;
+            border: none;
+        }
+}
+
+
+@mixin flex-guide($justify, $align, $direction){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+
