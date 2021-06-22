@@ -4,14 +4,15 @@
 
 @mixin remove-link-style{
         text-decoration: none;
-    
-        &:visited, &:hover,  &:active{
-            color:$white;
-            background: $secondary;
-            border: none;
-        }
+        color:$white;
 }
-
+@mixin hover-style{
+    &:hover{
+        color:$white;
+        background: $secondary;
+        border: 1px solid transparent;
+    }
+}
 
 @mixin flex-guide($justify, $align, $direction){
     display:flex;
@@ -20,4 +21,9 @@
     flex-direction: $direction;
 }
 
+@mixin font-style($font-family, $font-size, $font-weight){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
 

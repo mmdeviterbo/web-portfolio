@@ -2,27 +2,52 @@
     @include flex-guide(flex-end, center, row);
     position: absolute;
     width:100vw;
-    height:calc(90px + 2vh);
-    padding: 0 4vw;
+    height:100px;
+    padding-right: 4vw;
     color: $white;
-  
+    
+    #nav-container-start{
+        @include flex-guide(flex-start,center, row);
+        flex-grow: 12;
+        padding-left: 4vw;
+        height:100%;
+        #logo, p{
+            cursor:pointer;
+        }
+        p {
+            @include font-style($font-family, $font-size-title, 500);
+            letter-spacing: 5px;
+            margin-left: 20px;
+            text-align: end;
+        }
+    }
+
     #nav-container-end{
         @include flex-guide(space-around,center, row);
-        width:300px;
-        height:100%;
-        .concat{
+        flex-grow: 1;
+        .contact{
                 @include remove-link-style;
-                font-weight: 100;
-                font-size: $font-size-paragraph;
+                @include hover-style;
+                @include flex-guide(center,center, row);
+                @include font-style($font-family-secondary, $font-size-header, 100);
                 letter-spacing: 2px;
-                border: 1px solid white;
                 border-radius: 50px;
-                padding: 20px 50px;
+                border: 1px solid white;
+                padding:16px 45px;
+                transition:0.2s;
         }
         .menu-icon-container{
+            @include hover-style;
+            @include flex-guide(center,center, row);
             border: 1px solid white;
             border-radius: 50%;
-            padding: 15px;
+            padding:17px 18px;
+            transition:0.2s;
+            cursor:pointer;
+            i{
+                color:$white;
+            }
+            
         }
     }
 }
