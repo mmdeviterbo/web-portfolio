@@ -3,13 +3,12 @@
     position: absolute;
     width:100vw;
     height:100px;
-    padding-right: 4vw;
+    padding:0 5vw;
     color: $white;
     
     #nav-container-start{
         @include flex-guide(flex-start,center, row);
         flex-grow: 12;
-        padding-left: 4vw;
         height:100%;
         #logo, p{
             cursor:pointer;
@@ -18,7 +17,6 @@
             @include font-style($font-family, $font-size-title, 500);
             letter-spacing: 5px;
             margin-left: 20px;
-            text-align: end;
         }
     }
 
@@ -48,6 +46,21 @@
                 color:$white;
             }
             
+        }
+    }
+}
+
+@media (max-width: $tablet){
+    #nav-container-start p{
+        font-size: $font-size-paragraph !important;
+    }
+
+    #nav-container-end{
+        .contact{
+            display:none !important;
+        }
+        .menu-icon-container{
+            padding: 10px 11px !important;
         }
     }
 }

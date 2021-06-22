@@ -7,7 +7,7 @@
         color:$white;
 }
 @mixin hover-style{
-    &:hover{
+    &:hover, &:active{
         color:$white;
         background: $secondary;
         border: 1px solid transparent;
