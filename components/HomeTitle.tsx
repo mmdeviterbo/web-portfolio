@@ -7,7 +7,7 @@ export default function HomeTitle(): ReactElement {
             <Head><title> Portfolio </title></Head>
             <div className="gradient-circle"></div>
             <div className="home-title-container">
-                <p>
+                <p draggable={false}>
                     Design-driven 
                     <br/>
                     <span> 
