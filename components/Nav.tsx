@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/assets/logo.png'
 
-export default function Nav() {
+export default function Nav() : ReactElement {
     return (
         <div id="nav-container">
             <div id="nav-container-start">
