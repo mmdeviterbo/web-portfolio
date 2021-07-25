@@ -1,0 +1,33 @@
+.home-title-container{
+    border: 5px solid blue;
+    height:100vh;
+    display: grid;
+    place-content: center;
+
+    p {
+        @include font-style($font-size-main, $font-size-main, 900);
+        color: $accent;
+        text-align: center;
+        line-height: 0.9;
+        letter-spacing: -0.3vw;
+        @include remove-select();
+
+        span{
+            color:$white;
+        }
+    }
+}
+.gradient-circle{
+    position: absolute;
+    z-index:100;
+    transform:translate(-50%);
+    left:50%;
+    top:calc(-20px + -10vh);
+    
+    background-color:$white;
+    box-shadow: 0px 0px 100px 100px rgba(93, 145, 255, 0.09);
+    border-radius:50%;
+    
+    width: 40vw;
+    height: calc(20px + 10vh);
+}

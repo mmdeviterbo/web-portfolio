@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
+import HomeTitle from '../components/HomeTitle';
 
 export default function Home() : ReactElement {
   return (
     <div className="main-container">
-      <h1>Hello</h1>
-    
-    
+      <HomeTitle />
+      
     </div>
   )
 }

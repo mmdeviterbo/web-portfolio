@@ -3,9 +3,19 @@
 }
 
 @mixin remove-link-style{
-        text-decoration: none;
-        color:$white;
+    text-decoration: none;
+    color:$white;
 }
+
+@mixin remove-select{
+    -webkit-touch-callout: none;    /* iOS Safari */
+    -webkit-user-select: none;      /* Safari */
+    -khtml-user-select: none;       /* Konqueror HTML */
+    -moz-user-select: none;         /* Old versions of Firefox */
+    -ms-user-select: none;          /* Internet Explorer/Edge */
+    user-select: none; 
+}
+
 @mixin hover-style{
     &:hover, &:active{
         color:$white;
@@ -13,6 +23,7 @@
         border: 1px solid transparent;
     }
 }
+
 
 @mixin flex-guide($justify, $align, $direction){
     display:flex;

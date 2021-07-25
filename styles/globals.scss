@@ -1,9 +1,9 @@
 @import './commons/variables';
 @import './commons/mixin';
 @import './nav';
+@import './homeTitle';
 
-
-*{
+* {
   padding:0;
   margin:0;
   box-sizing: border-box;
@@ -12,5 +12,7 @@
 
 .main-container{
   background:$primary;
-  height:100vh;
+  min-height:300vh;
+  max-width: 100vw;
+  box-sizing: border-box;
 }

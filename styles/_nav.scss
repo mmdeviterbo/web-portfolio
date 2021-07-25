@@ -1,7 +1,8 @@
 #nav-container{
     @include flex-guide(flex-end, center, row);
     position: absolute;
-    width:100vw;
+    z-index:10000;
+    width:100%;
     height:100px;
     padding:0 5vw;
     color: $white;

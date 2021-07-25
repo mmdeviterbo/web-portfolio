@@ -1,7 +1,7 @@
 // colors
 $primary: #0e0718;
 $secondary:rgb(11, 87, 226);
-$accent: #FFFADE;
+$accent: #c9c7ba;
 $white: rgb(243, 243, 243);
 $black: rgb(12, 12, 12);
 
@@ -9,6 +9,7 @@ $black: rgb(12, 12, 12);
 $font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 $font-family-secondary: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 
+$font-size-main: calc(25px + 6vw);
 $font-size-title: 26px;
 $font-size-header: 22px;
 $font-size-paragraph: 18px;
