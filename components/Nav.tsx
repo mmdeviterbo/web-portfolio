@@ -16,7 +16,7 @@ export default function Nav() : ReactElement {
                     <a className="contact">Contact</a>
                 </Link>
                 <div className="menu-icon-container">
-                    <i className="fa fa-lg fa-bars"/>
+                    <i className="fa fa-lg fa-bars"></i>
                 </div>
             </div>
         </div>
