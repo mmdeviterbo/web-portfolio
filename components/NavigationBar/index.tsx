@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../public/assets/logo.png'
+import logo from './../../public/assets/logo.png'
 
 export default function Nav() : ReactElement {
     return (

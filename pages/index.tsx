@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import HomeTitle from '../components/HomeTitle';
-import Information from '../components/information';
-import Projects from '../components/projects';
+import HomeTitle from '../components/Home/homeTitle';
+import Information from '../components/Information';
+import Projects from '../components/Projects';
 
 export default function Home() : ReactElement {
   return (
