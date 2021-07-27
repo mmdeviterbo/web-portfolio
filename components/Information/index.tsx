@@ -4,43 +4,68 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector } from '@material-ui/lab';
 import { TimelineContent, TimelineOppositeContent, TimelineDot } from '@material-ui/lab';
-import { Paper, Typography,Container } from '@material-ui/core';
+import { ListItemText, Container } from '@material-ui/core';
 import { LaptopMac, Code, Storage, ColorLens } from '@material-ui/icons';
 
-import GraphqlIcon from './../SvgIcons/icons/graphqlIcon';
-import NextJSIcon from './../SvgIcons/icons/nextjsIcon';
-import NodeJSIcon from './../SvgIcons/icons/nodejsIcon';
-import ReactJSIcon from './../SvgIcons/icons/reactjsIcon';
+import ImageContainer from '../_commons/ImageContainer';
+
+import apollographqlIcon  from './../../public/assets/frameworksIcon/apollographqlIcon.png';
+import nextJSIcon  from './../../public/assets/frameworksIcon/nextJSIcon.png';
+import nodeJSIcon  from './../../public/assets/frameworksIcon/nodeJSIcon.png';
+import reactJSIcon from './../../public/assets/frameworksIcon/reactJSIcon.png';
+import mongodbIcon from './../../public/assets/frameworksIcon/mongodbIcon.png';
+
+import bootstrapIcon from './../../public/assets/frameworksIcon/bootstrapIcon.png';
+import gsapIcon from './../../public/assets/frameworksIcon/gsapIcon.png';
+import cssIcon from './../../public/assets/frameworksIcon/cssIcon.png';
+import tailwindIcon from './../../public/assets/frameworksIcon/tailwindIcon.png';
+import sassIcon from './../../public/assets/frameworksIcon/sassIcon.png';
+
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: '6px 16px',
-  },
-  timelineConnector:{
-    minHeight:'10vh',  
-    maxHeight:'calc(10vh + 15px)'
-  },
-  container:{
-      display:'flex',
-      flexDirection : 'column',
-      justifyContent: 'center',
-      border:'4px solid yellow',
-      height:'100vh',
-  },
-  information : {
-      color: 'white'
-  }
+    imageContainer: {
+        padding: '2px',
+        backgroundColor : '#0e0718',
+        minWidth: '70%',
+        display : 'flex',
+        justifyContent : 'flex-start',
+        flexWrap: 'wrap'
+    },
+
+    timelineConnector:{
+    height:'calc(16vh + 15px)',
+    width: '4px',
+    backgroundColor: 'white'
+    },
+    container:{
+        minHeight:'100vh',
+        maxWidth:'100vw',
+    },
+    primary : {
+        fontWeight:700,
+        color: 'white',
+        letterSpacing: '2px',
+        textTransform : 'uppercase'
+    },
+    secondary : {
+        color: 'white',
+        fontSize:'medium'
+    }
 }));
 
 export default function Information(): ReactElement {
     const classes = useStyles();
 
     return (
-        <Container className={classes.container}>
+        <div className={classes.container}>
             <Timeline>
                 <TimelineItem>
                     <TimelineOppositeContent>
-                        <Typography className={classes.information} variant={'h6'}>Marty de Viterbo</Typography>
+                        <ListItemText
+                            primary={<span className={classes.primary}>Marty de Viterbo</span>}
+                            secondary={<span className={classes.secondary}>Name</span>}
+                        >
+                        </ListItemText>
                     </TimelineOppositeContent>
 
                     <TimelineSeparator>
@@ -50,21 +75,25 @@ export default function Information(): ReactElement {
                         <TimelineConnector className={classes.timelineConnector}/>
                     </TimelineSeparator>
                     <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-
-                            <Typography variant="h6" component="h1"> ReactJS </Typography>
-                            <Typography variant="h6" component="h1"> NextJS </Typography>
-                        </Paper>
-                    </TimelineContent>
+                        <Container className={classes.imageContainer}>
+                            <ImageContainer imageSrc={reactJSIcon} caption={'ReactJS'}/>
+                            <ImageContainer imageSrc={nextJSIcon} caption={'NextJS'}/>
+                        </Container>
+                    </TimelineContent>  
                 </TimelineItem>
 
                 <TimelineItem>
                     <TimelineOppositeContent>
-                        <Typography className={classes.information} variant={'h6'}> 
-                            A<strong> Magna Cum Laude </strong> 
-                            graduate <br/> 
-                            of BS Computer Science  
-                        </Typography>
+                        <ListItemText
+                            primary={
+                                <span className={classes.primary}>
+                                    A Magna Cum Laude graduate <br/> 
+                                    of BS Computer Science  
+                                </span>
+                            }
+                            secondary={<span className={classes.secondary}>Degree</span>}
+                        > 
+                        </ListItemText>
                     </TimelineOppositeContent>
                     
                     <TimelineSeparator>
@@ -75,18 +104,22 @@ export default function Information(): ReactElement {
                     </TimelineSeparator>
                     
                     <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1"> NodeJS </Typography>
-                            <Typography variant="h6" component="h1"> Typescript </Typography>
-                            <Typography variant="h6" component="h1"> Apollo-Graphql </Typography>
-                        </Paper>
+                        <Container className={classes.imageContainer}>
+                            <ImageContainer imageSrc={nodeJSIcon} caption={'NodeJS'}/>
+                            <ImageContainer imageSrc={nodeJSIcon} caption={'TypeScript'}/>
+                            <ImageContainer imageSrc={apollographqlIcon} caption={'Apollo-GraphQl'}/>
+                        </Container>
                     </TimelineContent>
                 </TimelineItem>
 
 
                 <TimelineItem>
                     <TimelineOppositeContent>
-                            <Typography className={classes.information} variant={'h6'}>University of Philippines Los Baños</Typography>
+                            <ListItemText
+                                primary={<span className={classes.primary}>University of the Philippines Los Baños</span>}
+                                secondary={<span className={classes.secondary}>University</span>}
+                            >
+                            </ListItemText>
                     </TimelineOppositeContent>
                     
                     <TimelineSeparator>
@@ -97,15 +130,19 @@ export default function Information(): ReactElement {
                     </TimelineSeparator>
                     
                     <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1"> MongoDB </Typography>
-                        </Paper>
+                        <Container className={classes.imageContainer}>
+                            <ImageContainer imageSrc={mongodbIcon} caption={'MongoDB'}/>
+                        </Container>
                     </TimelineContent>
                 </TimelineItem>
                 
                 <TimelineItem>
                     <TimelineOppositeContent>
-                            <Typography className={classes.information} variant={'h6'}>Muntinlupa City | Trece Martirez City </Typography>
+                            <ListItemText
+                                primary={<span className={classes.primary}>Muntinlupa City | Trece Martirez City</span>}
+                                secondary={<span className={classes.secondary}>Location</span>}
+                            >
+                            </ListItemText>
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineDot color={"primary"}>
@@ -114,16 +151,17 @@ export default function Information(): ReactElement {
                     </TimelineSeparator>
                     
                     <TimelineContent>
-                        <Paper elevation={10} className={classes.paper}>
-                            <Typography variant="subtitle1" component="h1"> CSS </Typography>
-                            <Typography variant="subtitle1" component="h1"> SASS </Typography>
-                            <Typography variant="subtitle1" component="h1"> Tailwind </Typography>
-                            <Typography variant="subtitle1" component="h1"> Bootstrap </Typography>
-                            <Typography variant="subtitle1" component="h1"> Gsap </Typography>
-                        </Paper>
+                        <Container className={classes.imageContainer}>
+                            <ImageContainer imageSrc={cssIcon} caption={'CSS'}/>
+                            <ImageContainer imageSrc={sassIcon} caption={'Sass'}/>
+                            <ImageContainer imageSrc={gsapIcon} caption={'Gsap'}/>
+                            <ImageContainer imageSrc={bootstrapIcon} caption={'Bootstrap'}/>
+                            <ImageContainer imageSrc={tailwindIcon} caption={'Tailwind'}/>
+                        </Container>
+
                     </TimelineContent>
                 </TimelineItem>
             </Timeline>
-    </Container>
+    </div>
     )
 }
