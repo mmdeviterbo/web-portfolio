@@ -12,7 +12,7 @@ export default function HomeTitle(): ReactElement {
                         development of 
                     </span>
                     <br/> 
-                    web products
+                    Web Products
                 </p>
             </div>
         </>

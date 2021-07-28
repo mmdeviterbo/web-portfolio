@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import { tabletMobileStyle as useStyles }  from './style';
 
 import { InformationPersonArgs, TechStackArgs, InformationTechStackArgs } from './values'
 import { informationPerson, informationTechStack} from './values'
@@ -7,14 +6,15 @@ import { informationPerson, informationTechStack} from './values'
 import ImageContainer from '../_commons/ImageContainer';
 
 export default function InformationTabletMobile() : ReactElement {
-  const classes  = useStyles({})
-
   return (
     <>
-      <div className={classes.container}>
+      <p className="titleInformationTabletMobile">
+        About Me
+      </p>
+      <div className="containerTabletMobile">
         {informationPerson?.map((person : InformationPersonArgs, index:number) : ReactElement =>{
           return(
-            <div className={classes.rowPerson} key={index}> 
+            <div className="rowPerson" key={index}> 
               {person?.icon}
               <div>
                 <p> {person.value} </p>
@@ -24,13 +24,16 @@ export default function InformationTabletMobile() : ReactElement {
           )
         })}
       </div>
-
-      <div className={classes.container}>
+      
+      <p className="titleInformationTabletMobile">
+        Tech Stack
+      </p>
+      <div className="containerTabletMobile">
         {informationTechStack?.map((techStacks : InformationTechStackArgs, index:number) : ReactElement =>{
           return(
-              <div className={classes.rowTech}>
-                <p className={classes.primary}>{techStacks.title}</p>
-                <div className={classes.rowTechStack}> 
+              <div className="rowTech" key={index}>
+                <p>{techStacks.title}</p>
+                <div className="rowTechStack"> 
                   {techStacks?.value?.map((techStack : TechStackArgs, index : number) : ReactElement =>{
                     return(
                       <React.Fragment key={index}>

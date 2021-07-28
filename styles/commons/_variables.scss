@@ -10,11 +10,15 @@ $font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 $font-family-secondary: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 
 $font-size-main: calc(25px + 6vw);
-$font-size-title: 26px;
-$font-size-header: 22px;
-$font-size-paragraph: 18px;
+$font-size-title: calc(25px + 1vw);
+$font-size-header: calc(20px +0.5vw);
+$font-size-paragraph: calc(16px + 0.5vw);
 
 //media queries
 $mobile: 480px;
 $tablet: 768px;
 
+// spacing (margin, padding, etc.)
+$space-main: 10px;
+$space-secondary: 6px;
+$space-minor: 1px;

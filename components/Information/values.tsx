@@ -34,10 +34,25 @@ import tailwindIcon from './../../public/assets/frameworksIcon/tailwindIcon.png'
 import sassIcon from './../../public/assets/frameworksIcon/sassIcon.png';
 
 export const informationPerson : InformationPersonArgs[] = [
-  { title : 'Name', value : 'Marty de Viterbo', icon : <FaceIcon fontSize={'large'}/> },
-  { title : 'Degree', value : 'A Magna Cum Laude graduate of BS Computer Science', icon : <SchoolIcon fontSize={'large'}/> },
-  { title : 'College', value : 'University of the Philippines Los Baños', icon : <AccountBalanceIcon fontSize={'large'}/> },
-  { title : 'Location', value : 'Manila, Philippines', icon : <HomeWorkIcon fontSize={'large'}/> }
+  { 
+    title : 'Name', 
+    value : 'Marty de Viterbo', 
+    icon : <FaceIcon fontSize={'large'} style={{color: 'white' }}/> 
+  },
+  { 
+    title : 'Degree', 
+    value : 'A Magna Cum Laude graduate of BS Computer Science', 
+    icon : <SchoolIcon fontSize={'large'} style={{color: 'white' }}/> 
+  },
+  { 
+    title : 'College',
+    value : 'University of the Philippines Los Baños',
+    icon : <AccountBalanceIcon fontSize={'large'} style={{color: 'white' }}/> 
+  },
+  { 
+    title : 'Location',
+    value : 'Manila, Philippines',
+    icon : <HomeWorkIcon fontSize={'large'} style={{color: 'white' }}/> }
 ]
 
 export const informationTechStack: InformationTechStackArgs[] = [

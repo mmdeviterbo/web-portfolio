@@ -1,14 +1,13 @@
 .iconContainer{
-    min-height: 100px;
-    min-width: 100px;
-    margin: 4px;
-    margin-top: 0;
     @include flex-guide(center, center, column);
     @include remove-select();
+    height: calc(80px + 1vw);
+    width: calc(80px + 1vw);
+    margin: $space-main;
+    margin-top: 0;
     p {
         @include font-style($font-family, medium, 100, $white);
-        margin: 5px;
-		letter-spacing: 2px;
+		letter-spacing: $space-minor*2;
 		text-transform : uppercase;
     }
 }
@@ -18,4 +17,10 @@
     height: 100%;
     width: 100%;
     object-fit: fill;
+}
+
+@media (max-width : $mobile){
+    .iconContainer > p {
+        display: none;
+    }
 }

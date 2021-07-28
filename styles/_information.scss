@@ -11,3 +11,99 @@
       display : block;
   }
 }
+
+// informationDesktop.tsx
+.imageContainer{
+  @include flex-guide(flex-start, flex-start, row);
+  flex-wrap: wrap;
+}
+.timelineConnector{
+  height:calc(14vh + 14px);
+  background-color: white;
+}
+.containerDesktop{
+  min-height: 100vh;
+  max-width: 100vw;
+}	
+.primaryDesktop{
+  @include font-style($font-family, large, 200, white);
+  color: white;
+  letter-spacing: $space-minor;
+  text-transform : uppercase;
+}
+.secondary{
+  @include font-style($font-family, medium, 300, white);
+  letter-spacing: $space-minor;
+}
+
+
+// informationTabletMobile.tsx
+.titleInformationTabletMobile{
+  @include font-style($font-family, $font-size-title, 700, $white);
+  margin: 4vw;
+  margin-bottom: $space-secondary;
+}
+
+.containerTabletMobile{
+  margin: 0 4vw;
+  & > *{
+    border: $space-minor solid white;
+    padding: $space-minor $space-secondary;
+    & > *{
+      color : 'white'
+    }
+  }
+}
+
+.rowPerson{
+  @include remove-select();
+  display: grid;
+  place-content: center;
+  grid-template-columns : 1fr 4fr;
+  padding: $space-secondary 0;
+
+  & > :nth-child(1){
+    margin: auto;
+  }
+
+  & > div{
+    @media (max-width : $mobile){
+      @include flex-guide(flex-start, center, row);
+    }
+  }
+
+  div > p:nth-child(1){
+    @include font-style($font-family, large, 100, white);
+    letter-spacing: $space-minor;
+    text-transform : uppercase;
+    
+    @media (max-width : $mobile){
+      @include font-style($font-family, smaller, 100, white);
+    }
+  }
+  div > p:nth-child(2){
+    @include font-style($font-family, medium, 100, white);
+    line-height: 1.5;
+
+    @media (max-width : $mobile){
+        display: none;
+    }
+  }
+
+}
+.rowTech{
+  display: grid;
+  place-items:center;
+
+  & > p{
+    @include font-style($font-family, medium, 600, $white);
+    padding: calc(4px + 1vw);
+    letter-spacing: $space-minor;
+    text-transform : uppercase;
+    
+  }
+}
+.rowTechStack{
+  @include flex-guide(center,center, row);
+  flex-wrap: wrap;
+}

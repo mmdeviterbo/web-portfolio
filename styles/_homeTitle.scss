@@ -4,17 +4,23 @@
     place-content: center;
 
     p {
-        @include font-style($font-size-main, $font-size-main, 900, $accent);
+        @include font-style($font-family, $font-size-main, 900, $accent);
         text-align: center;
-        line-height: 0.9;
-        letter-spacing: -0.3vw;
+        line-height: 1;
+        letter-spacing: $space-minor;
         @include remove-select();
-
         span{
             color:$white;
         }
+        
+        @media (max-width : $mobile){
+            @include font-style($font-family, $font-size-title, 900, $accent);
+            line-height: 1.3;
+        }
     }
 }
+
+
 .gradient-circle{
     position: absolute;
     z-index:100;

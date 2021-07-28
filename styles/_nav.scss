@@ -16,7 +16,7 @@
         }
         p {
             @include font-style($font-family, $font-size-title, 500, $white);
-            letter-spacing: 5px;
+            letter-spacing: $space-secondary;
             margin-left: 20px;
         }
     }
@@ -29,9 +29,9 @@
                 @include hover-style;
                 @include flex-guide(center,center, row);
                 @include font-style($font-family-secondary, $font-size-header, 100, $white);
-                letter-spacing: 2px;
+                letter-spacing: ($space-minor)+1px;
                 border-radius: 50px;
-                border: 1px solid white;
+                border: $space-minor solid white;
                 padding:16px 45px;
                 transition:0.2s;
         }
