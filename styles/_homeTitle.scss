@@ -4,8 +4,7 @@
     place-content: center;
 
     p {
-        @include font-style($font-size-main, $font-size-main, 900);
-        color: $accent;
+        @include font-style($font-size-main, $font-size-main, 900, $accent);
         text-align: center;
         line-height: 0.9;
         letter-spacing: -0.3vw;

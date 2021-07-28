@@ -1,0 +1,13 @@
+//information.tsx
+#informationTabletMobile{
+  display:none;
+}
+
+@media (max-width : $tablet){
+  #informationDesktop{
+      display : none;
+  }
+  #informationTabletMobile{
+      display : block;
+  }
+}

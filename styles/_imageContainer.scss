@@ -1,13 +1,15 @@
 .iconContainer{
     min-height: 100px;
     min-width: 100px;
-    margin: 5px;
+    margin: 4px;
     margin-top: 0;
     @include flex-guide(center, center, column);
+    @include remove-select();
     p {
+        @include font-style($font-family, medium, 100, $white);
         margin: 5px;
-        color : $white;
-        font-size: large;
+		letter-spacing: 2px;
+		text-transform : uppercase;
     }
 }
 .icon-content{
@@ -17,4 +19,3 @@
     width: 100%;
     object-fit: fill;
 }
-
