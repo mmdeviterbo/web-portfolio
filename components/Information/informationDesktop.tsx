@@ -10,45 +10,48 @@ import { informationPerson, informationTechStack} from './values'
 
 export default function Information(): ReactElement {
 	return (
-		<div className="containerDesktop">
-			<Timeline>
-				{
-					informationPerson.map((person : InformationPersonArgs, index:number) : ReactElement =>{
-						return(
-							<TimelineItem key={index}>
-								<TimelineOppositeContent>
-									<ListItemText
-										primary={<span className="primaryDesktop">{ person?.value }</span>}
-										secondary={<span className="secondary">{ person?.title }</span>}
-									>
-									</ListItemText>
-								</TimelineOppositeContent>
+		<>
+      <p className='project-text'>About Me</p>
+			<div className="containerDesktop">
+				<Timeline>
+					{
+						informationPerson.map((person : InformationPersonArgs, index:number) : ReactElement =>{
+							return(
+								<TimelineItem key={index}>
+									<TimelineOppositeContent>
+										<ListItemText
+											primary={<span className="primaryDesktop">{ person?.value }</span>}
+											secondary={<span className="secondary">{ person?.title }</span>}
+											>
+										</ListItemText>
+									</TimelineOppositeContent>
 
-								<TimelineSeparator>
-										<TimelineDot color={"primary"}>
-												{person?.icon}
-										</TimelineDot>
-										{index+1 !== informationPerson.length && <TimelineConnector className="timelineConnector"/>}
-								</TimelineSeparator>
+									<TimelineSeparator>
+											<TimelineDot color={"primary"}>
+													{person?.icon}
+											</TimelineDot>
+											{index+1 !== informationPerson.length && <TimelineConnector className="timelineConnector"/>}
+									</TimelineSeparator>
 
-								<TimelineContent>
-									<div className="imageContainer">
-											{
-												informationTechStack[index]?.value?.map((techStack : TechStackArgs, indexNum : number) : ReactElement =>{
-													return(
-														<React.Fragment key={indexNum}>
-															<ImageContainer imageSrc={techStack.icon} caption={techStack.title}/>
-														</React.Fragment>
-													)
-												})
-											}
-									</div>
-								</TimelineContent> 
-							</TimelineItem>
-						)
-					})
-				}
-			</Timeline>
-	</div>
+									<TimelineContent>
+										<div className="imageContainer">
+												{
+													informationTechStack[index]?.value?.map((techStack : TechStackArgs, indexNum : number) : ReactElement =>{
+														return(
+															<React.Fragment key={indexNum}>
+																<ImageContainer imageSrc={techStack.icon} caption={techStack.title}/>
+															</React.Fragment>
+														)
+													})
+												}
+										</div>
+									</TimelineContent> 
+								</TimelineItem>
+							)
+						})
+					}
+				</Timeline>
+		</div>
+		</>
 	)
 }

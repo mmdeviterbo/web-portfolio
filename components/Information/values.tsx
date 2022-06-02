@@ -32,6 +32,7 @@ import gsapIcon from './../../public/assets/frameworksIcon/gsapIcon.png';
 import cssIcon from './../../public/assets/frameworksIcon/cssIcon.png';
 import tailwindIcon from './../../public/assets/frameworksIcon/tailwindIcon.png';
 import sassIcon from './../../public/assets/frameworksIcon/sassIcon.png';
+import mysqlIcon from './../../public/assets/frameworksIcon/mysqlIcon.png';
 
 export const informationPerson : InformationPersonArgs[] = [
   { 
@@ -74,7 +75,8 @@ export const informationTechStack: InformationTechStackArgs[] = [
   { 
     title : 'Database',
     value : [ 
-      { title : 'MongoDB', icon : mongodbIcon } 
+      { title : 'MongoDB', icon : mongodbIcon },
+      { title : 'MySql', icon : mysqlIcon },
     ]
   },
   { 
