@@ -1,5 +1,4 @@
 .project-container{
-    @include border-guide();
     height: 100vh;
     position: relative;
     @media (max-width : $tablet){
@@ -54,4 +53,53 @@
         object-fit: cover;
         width: 100%;
     }
+}
+
+.project-techstack{
+    @include flex-guide(flex-start, center, row);
+}
+
+.project-descriptions{
+
+}
+
+.project-description-container-odd{
+    height:60%;
+    // border:2px solid yellow;
+    @include flex-guide(space-between, flex-start, column);
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    z-index: 9;
+}
+
+.project-description-container-even{
+    height:60%;
+    // border:2px solid yellow;
+    @include flex-guide(space-between, flex-start, column);
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    z-index: 9;
+}
+
+
+.project-description-sub{
+    @include font-style($font-family, large, 0, rgba(255, 255, 255, 0.5));
+
+}
+
+.project-description-title{
+    @include font-style($font-family, $font-size-title, 600, white);
+    margin-top: $space-large;
+    margin-bottom: $space-large;
+
+}
+
+.project-description-link{
+    @include font-style($font-family, $font-size-header, 200, white);
+    letter-spacing: $space-main;
+    border-bottom: 2px solid $secondary;
+    width: fit-content;
+    cursor: pointer;
 }

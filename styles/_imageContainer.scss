@@ -5,6 +5,7 @@
     width: calc(80px + 1vw);
     margin: $space-main;
     margin-top: 0;
+    margin-left: 0;
     p {
         @include font-style($font-family, medium, 100, $white);
 		letter-spacing: $space-minor*2;
