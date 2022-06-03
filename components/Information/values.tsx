@@ -33,6 +33,9 @@ import cssIcon from './../../public/assets/frameworksIcon/cssIcon.png';
 import tailwindIcon from './../../public/assets/frameworksIcon/tailwindIcon.png';
 import sassIcon from './../../public/assets/frameworksIcon/sassIcon.png';
 import mysqlIcon from './../../public/assets/frameworksIcon/mysqlIcon.png';
+import chakraIcon from './../../public/assets/frameworksIcon/chakraIcon.png';
+import figmaIcon from './../../public/assets/frameworksIcon/figmaIcon.png';
+import restIcon from './../../public/assets/frameworksIcon/RESTIcon.png';
 
 export const informationPerson : InformationPersonArgs[] = [
   { 
@@ -90,3 +93,16 @@ export const informationTechStack: InformationTechStackArgs[] = [
     ]
   },
 ]
+
+export const otherTechStack: InformationTechStackArgs[] = [
+  { 
+    title : 'Others',
+    value : [ 
+        { title : 'Chakra', icon : chakraIcon },
+        { title : 'Figma', icon : figmaIcon },
+        { title : 'REST API', icon : restIcon },
+    ]
+  }
+]
+
+

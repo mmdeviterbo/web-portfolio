@@ -10,7 +10,7 @@ export default function IconContainer({
     return (
         <div className="iconContainer">
             <div className="icon-content"> 
-                <Image src={imageSrc} alt="#"/>
+                <Image src={imageSrc} alt="#" draggable={false}/>
             </div>
             <p> {caption} </p>
         </div>

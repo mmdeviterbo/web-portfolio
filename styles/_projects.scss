@@ -1,13 +1,11 @@
 .project-container{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
+    padding: $space-minor 4vw;
     @media (max-width : $tablet){
-        height: 92vh;
+        min-height: fit-content;
+        padding: $space-main 4vw;
     }
-    @media (max-width : $mobile){
-        height: 60vh;
-    }
-
 }
 .project-text{
     text-align: center;
@@ -30,7 +28,7 @@
     @media (max-width : $tablet){
         top:0%;
         width: 100%;
-        padding: $space-minor 4vw;
+        position:relative;
     }
 
     img{
@@ -47,7 +45,7 @@
     @media (max-width : $tablet){
         top:0%;
         width: 100%;
-        padding: $space-minor 4vw;
+        position:relative;
     }
     img{
         object-fit: cover;
@@ -57,6 +55,9 @@
 
 .project-techstack{
     @include flex-guide(flex-start, center, row);
+    @media (max-width : $tablet){
+        display: none;
+    }
 }
 
 .project-descriptions{
@@ -65,22 +66,32 @@
 
 .project-description-container-odd{
     height:60%;
-    // border:2px solid yellow;
     @include flex-guide(space-between, flex-start, column);
     position: absolute;
     top: 10%;
     left: 8%;
     z-index: 9;
+
+    @media (max-width : $tablet){
+        left: 0%;
+        position:relative;
+        margin-bottom: $space-large;
+    }
 }
 
 .project-description-container-even{
     height:60%;
-    // border:2px solid yellow;
     @include flex-guide(space-between, flex-start, column);
     position: absolute;
     top: 10%;
     right: 8%;
     z-index: 9;
+
+    @media (max-width : $tablet){
+        left: 0%;
+        position:relative;
+        margin-bottom: $space-large;
+    }
 }
 
 
@@ -102,4 +113,8 @@
     border-bottom: 2px solid $secondary;
     width: fit-content;
     cursor: pointer;
+    transition: 0.1s;
+    &:hover{
+        border-bottom: 5px solid $secondary;
+    }
 }
