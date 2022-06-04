@@ -36,6 +36,10 @@ import mysqlIcon from './../../public/assets/frameworksIcon/mysqlIcon.png';
 import chakraIcon from './../../public/assets/frameworksIcon/chakraIcon.png';
 import figmaIcon from './../../public/assets/frameworksIcon/figmaIcon.png';
 import restIcon from './../../public/assets/frameworksIcon/RESTIcon.png';
+import githubIcon from './../../public/assets/frameworksIcon/githubIcon.png';
+import materialIcon from './../../public/assets/frameworksIcon/materialIcon.png';
+import gmailIcon from './../../public/assets/frameworksIcon/gmailIcon.png';
+import linkedinIcon from './../../public/assets/frameworksIcon/linkedinIcon.png';
 
 export const informationPerson : InformationPersonArgs[] = [
   { 
@@ -98,11 +102,13 @@ export const otherTechStack: InformationTechStackArgs[] = [
   { 
     title : 'Others',
     value : [ 
-        { title : 'Chakra', icon : chakraIcon },
-        { title : 'Figma', icon : figmaIcon },
-        { title : 'REST API', icon : restIcon },
+        { title : 'Chakra', icon : chakraIcon },    //0
+        { title : 'Figma', icon : figmaIcon },      //1
+        { title : 'REST API', icon : restIcon },    //2
+        { title: 'Material', icon: materialIcon},   //3
+        { title: 'LinkedIn', icon: linkedinIcon},   //4
+        { title: 'GitHub', icon:githubIcon},        //5
+        { title: 'Gmail', icon: gmailIcon},         //6
     ]
   }
 ]
-
-

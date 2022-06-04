@@ -15,9 +15,12 @@
             cursor:pointer;
         }
         p {
-            @include font-style($font-family, $font-size-title, 500, $white);
+            @include font-style($font-family, $font-size-paragraph, 500, $white);
             letter-spacing: $space-secondary;
             margin-left: 20px;
+            @media (max-width : $tablet){
+                display: none;
+            }
         }
     }
 
@@ -28,7 +31,7 @@
                 @include remove-link-style;
                 @include hover-style;
                 @include flex-guide(center,center, row);
-                @include font-style($font-family-secondary, $font-size-header, 100, $white);
+                @include font-style($font-family-secondary, large, 100, $white);
                 letter-spacing: ($space-minor)+1px;
                 border-radius: 50px;
                 border: $space-minor solid white;

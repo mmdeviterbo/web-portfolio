@@ -1,8 +1,11 @@
 .home-title-container{
-    height:100vh;
+    height:80vh;
     display: grid;
     place-content: center;
-
+    @media (max-width : $tablet){
+        padding: 0 $space-main;
+        height: 58vh;
+    }
     p {
         @include font-style($font-family, $font-size-main, 900, $accent);
         text-align: center;
@@ -12,12 +15,12 @@
         span{
             color:$white;
         }
-        
         @media (max-width : $mobile){
             @include font-style($font-family, $font-size-title, 900, $accent);
             line-height: 1.3;
         }
     }
+
 }
 
 
@@ -34,4 +37,20 @@
     
     width: 40vw;
     height: calc(20px + 10vh);
+}
+
+.contact-section-container{
+    @include flex-guide(space-evenly, center, row);
+    margin: $space-main 0;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 6%;
+}
+
+.contact-section-container > *{
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        transform: translate(0,-8px);
+    }
 }
