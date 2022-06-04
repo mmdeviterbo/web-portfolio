@@ -27,16 +27,20 @@
     #nav-container-end{
         @include flex-guide(space-around,center, row);
         flex-grow: 1;
+        gap:1em;
         .contact{
-                @include remove-link-style;
-                @include hover-style;
-                @include flex-guide(center,center, row);
-                @include font-style($font-family-secondary, large, 100, $white);
-                letter-spacing: ($space-minor)+1px;
-                border-radius: 50px;
-                border: $space-minor solid white;
-                padding:16px 45px;
-                transition:0.2s;
+            @include flex-guide(center,center, row);
+            @include font-style($font-family-secondary, larger, 600, rgba(255,255,255,0.7));
+            letter-spacing: 0.2em;
+            border-bottom: 4px solid rgba(0,0,0,0);
+            padding:16px 0.5em 12px 0.5em;
+            width: fit-content;
+            transition:0.2s;
+            cursor: pointer;
+            &:hover{
+                color: $white;
+                border-bottom: 3px solid $secondary;
+            }
         }
         .menu-icon-container{
             @include hover-style;
@@ -49,7 +53,10 @@
             i{
                 color:$white;
             }
-            
+            display: none;
+            @media (max-width : $tablet){
+                display: block;
+            }
         }
     }
     *{

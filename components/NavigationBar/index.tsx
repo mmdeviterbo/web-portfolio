@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import Link from 'next/link';
 import Image from 'next/image';
 import logo from './../../public/assets/logo.png'
 
@@ -12,9 +11,24 @@ export default function Nav() : ReactElement {
             </div>
 
             <div id="nav-container-end">
-                <Link href="/">
-                    <a className="contact">Contact</a>
-                </Link>
+                <a className="contact" 
+                    onClick={()=>document.querySelector('#project-text-id').scrollIntoView({ behavior : 'smooth' })}
+                >
+                    PROJECTS
+                </a>
+                <a className="contact"
+                    onClick={()=>{
+                        if(window.innerWidth <= 768) document.querySelector('#informationTabletMobile').scrollIntoView({ behavior : 'smooth' })
+                        else document.querySelector('#informationDesktop').scrollIntoView({ behavior : 'smooth' })
+                    }}
+                        >
+                    ABOUT
+                </a>
+                
+                <a className="contact">
+                    CONTACT
+                </a>
+                
                 <div className="menu-icon-container">
                     <i className="fa fa-lg fa-bars"/>
                 </div>
