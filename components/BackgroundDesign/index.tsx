@@ -11,7 +11,7 @@ export default function BackgroundDesign() : ReactElement {
     for(let i=0;i<10;i++){
       gsap.to(`#fly-logos-${i}`,{
         x: randomIntFromInterval(-10, 700) * randomIntFromInterval(-1, 1),
-        y: randomIntFromInterval(-10, 1200) * randomIntFromInterval(-1, 1),
+        y: randomIntFromInterval(-10, 1100) * randomIntFromInterval(-1, 1),
         duration: 200,
         repeat: -1
       })
