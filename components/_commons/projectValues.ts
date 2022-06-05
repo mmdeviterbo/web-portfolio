@@ -57,7 +57,7 @@ const projectValues: ProjectArg[] = [
     tags:'Healthcare, COVID-19, Laboratory Tests',
     title: 'Dashlabs.ai | Simplifying Healthcare',
     learning: dashlabsLearning,
-    link:'https://shop.dashlabs.app/'
+    link:'https://accounts.dashlabs.app/'
   },
   {
     tags:'Blended Learning Platform, Online Classroom, Assessment',
