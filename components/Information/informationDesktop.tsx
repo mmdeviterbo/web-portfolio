@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useRef, useEffect } from 'react'
 
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector } from '@material-ui/lab';
 import { TimelineContent, TimelineOppositeContent, TimelineDot } from '@material-ui/lab';
@@ -8,10 +8,34 @@ import ImageContainer from '../_commons/ImageContainer';
 import { InformationPersonArgs, TechStackArgs } from './values'
 import { informationPerson, informationTechStack} from './values'
 
+import gsap from 'gsap';
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin( ScrollTrigger, ScrollToPlugin );
+
+
+
 export default function Information(): ReactElement {
+	const aboutTextRef = useRef(null);
+
+	useEffect(()=>{
+			gsap.from(aboutTextRef.current,{
+					scrollTrigger: {
+							trigger: aboutTextRef.current,
+							toggleActions: "restart pause reverse pause",
+							start: "top center",
+							end: "center center",
+							scrub: 1
+					},
+					y:-100,
+					opacity: 0,
+			})
+	},[])
 	return (
 		<>
-      <p className='project-text'>About Me</p>
+      <p className="project-text" ref={aboutTextRef}>
+				<span>About Me</span>
+			</p>
 			<div className="containerDesktop">
 				<Timeline>
 					{

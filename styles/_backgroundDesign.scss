@@ -1,0 +1,16 @@
+.bgd-main{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 0 !important;
+  color: $secondary;
+}
+
+img[id^=fly-logos]{
+  transform: scale(0.025);
+  opacity: 0.05;
+  position: absolute;
+
+}

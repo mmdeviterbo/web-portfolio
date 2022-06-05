@@ -2,13 +2,11 @@ import React, { ReactElement, useEffect } from 'react'
 import gsap from 'gsap'
 
 export default function HomeTitle(): ReactElement {
-    const VOWELS: string[] = ["a", "e", "i", "o", "u"];
     const TITLE_1: string = "Design-Data";
     const TITLE_2: string = "development of";
-    const TITLE_3: string = "Web Products";
+    const TITLE_3: string = "web products";
 
     useEffect(()=>{
-
         for(let i=0;i<TITLE_1.length;i++){
             const TITLE_1_ELEM = document.querySelector(`.animate-text-1-${i}`)
             const hover_1 = gsap.to(TITLE_1_ELEM, {
@@ -33,6 +31,17 @@ export default function HomeTitle(): ReactElement {
             ease: "power4.out",
             delay: 0.10
         })
+
+        gsap.to(`.web-products`,{
+            opacity: 1,
+            duration: 0.5,
+            delay: 2
+        })
+
+        //scrolltrigger
+        
+
+
     },[])   
     
     return (
@@ -44,7 +53,7 @@ export default function HomeTitle(): ReactElement {
                     <br/>
                     {TITLE_2.split(/\.  /).map((letter: string, index: number)=><span key={index} id="dev-of" className={`dev-of dev-of-${index}`}>{letter}</span>)}
                     <br/>
-                    {TITLE_3.split(/\./).map((letter: string, index: number)=><span key={index} className="animate-text animate-text">{letter}</span>)}
+                    {TITLE_3.split(/\./).map((letter: string, index: number)=><span key={index} className="animate-text web-products">{letter}</span>)}
                 </p>
             </div>
         </>

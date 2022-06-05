@@ -1,4 +1,5 @@
 .project-container{
+    overflow:hidden;
     min-height: 100vh;
     position: relative;
     padding: $space-minor 4vw;
@@ -7,6 +8,7 @@
         padding: $space-main 4vw;
     }
 }
+
 .project-text{
     text-align: center;
     @include font-style($font-family, $font-size-main, 900, $white);
@@ -30,7 +32,7 @@
         width: 100%;
         position:relative;
     }
-
+    z-index: 2 !important;
     img{
         object-fit: cover;
         width: 100%;
@@ -47,6 +49,7 @@
         width: 100%;
         position:relative;
     }
+    z-index: 2 !important;
     img{
         object-fit: cover;
         width: 100%;

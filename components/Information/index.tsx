@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef } from 'react'
+import React, { ReactElement } from 'react'
 import InformationDesktop from './informationDesktop'
 import InformationTabletMobile from './informationTabletMobile'
 

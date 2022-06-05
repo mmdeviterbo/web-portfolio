@@ -5,6 +5,7 @@
 @import './projects';
 @import './imageContainer';
 @import './information';
+@import './backgroundDesign';
 
 * {
   padding:0;
@@ -17,4 +18,8 @@
   background:$primary;
   min-height:300vh;
   box-sizing: border-box;
+}
+
+p, a{
+  z-index: 3 !important;
 }
