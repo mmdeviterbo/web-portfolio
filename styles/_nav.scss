@@ -11,9 +11,6 @@
         @include flex-guide(flex-start,center, row);
         flex-grow: 12;
         height:100%;
-        #logo, p{
-            cursor:pointer;
-        }
         p {
             @include font-style($font-family, $font-size-paragraph, 500, $white);
             letter-spacing: $space-secondary;
@@ -76,5 +73,38 @@
         .menu-icon-container{
             padding: 10px 11px !important;
         }
+    }
+}
+
+.contact-dialog-container{
+    background-color: $primary;
+    padding: 2em 4em;
+    *{
+        color: $white;
+    }
+}
+.table-value{
+    @include font-style($font-family-secondary, large, 600, $white);
+}
+
+.contact-dialog-title{
+    @include font-style($font-family-secondary, larger, 900, $white);
+    letter-spacing: 0.2em;
+    border-bottom: 4px solid rgba(0,0,0,0);
+    padding:16px 0.5em 12px 0.5em;
+    width: fit-content;
+    transition:0.2s;
+}
+
+.download-cv{
+    @extend .visit-link;
+}
+
+.table-value-email{
+    @extend .table-value;
+    border-bottom: 3px solid $secondary;
+    cursor: pointer;
+    &:hover{
+        color:$secondary;
     }
 }

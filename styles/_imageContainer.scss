@@ -10,6 +10,7 @@
         @include font-style($font-family, medium, 100, $white);
 		letter-spacing: $space-minor*2;
 		text-transform : uppercase;
+
     }
 }
 .icon-content{
@@ -20,7 +21,7 @@
     object-fit: fill;
 }
 
-@media (max-width : $mobile){
+@media (max-width : $tablet){
     .iconContainer > p {
         display: none;
     }

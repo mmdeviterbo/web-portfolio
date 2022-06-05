@@ -6,13 +6,17 @@
         padding: 0 $space-main;
         height: 58vh;
     }
-    p {
+    #home-title-text, .animate-text{
         @include font-style($font-family, $font-size-main, 900, $accent);
+        @include remove-select();
         text-align: center;
         line-height: 1;
         letter-spacing: $space-minor;
-        @include remove-select();
-        span{
+        display: inline-block;
+        transition: 0.5s;
+        #dev-of{
+            transition: 0.7s;
+            display: inline-block;
             color:$white;
         }
         @media (max-width : $mobile){
@@ -20,9 +24,7 @@
             line-height: 1.3;
         }
     }
-
 }
-
 
 .gradient-circle{
     position: absolute;
