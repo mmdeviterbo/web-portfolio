@@ -8,8 +8,7 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin( ScrollTrigger, ScrollToPlugin );
 
-
-export default function Projects(): ReactElement {
+const Projects=(): ReactElement => {
     const projectTextRef = useRef(null);
 
     useEffect(()=>{
@@ -36,3 +35,4 @@ export default function Projects(): ReactElement {
         </>
     )
 }
+export default Projects;
