@@ -2,9 +2,13 @@ import React, { ReactElement, useState } from 'react'
 import Image from 'next/image';
 import logo from './../../public/assets/logo.png'
 import ContactDialog from './contactDialog';
-
+import MobileNavigationBar from './mobileNavigationBar';
 export default function Nav() : ReactElement {
     const [open, setOpen] = useState(false)
+    
+    //mobile
+    const [openMenu, setOpenMenu] = useState(false)
+
     return (
         <>
             <div id="nav-container" draggable={false}>
@@ -32,12 +36,18 @@ export default function Nav() : ReactElement {
                         CONTACT
                     </a>
                     
-                    <div className="menu-icon-container">
+                    <div className="menu-icon-container" onClick={()=>setOpenMenu(true)}>
                         <i className="fa fa-lg fa-bars"/>
                     </div>
                 </div>
             </div>
             <ContactDialog open={open} setOpen={setOpen}/>
+            <MobileNavigationBar openMenu={openMenu} 
+                setOpenMenu={setOpenMenu}
+                open={open}
+                setOpen={setOpen}
+            />
+
         </>
     )
 }

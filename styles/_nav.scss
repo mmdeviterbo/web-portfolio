@@ -108,3 +108,25 @@
         color:$secondary;
     }
 }
+
+.mobile-nav-dialog{
+    height: 100vh;
+    gap: 1em;
+    padding: 2em 4em;
+    background-color: $primary;
+    color: $white;   
+    p{
+        @include font-style($font-family-secondary, larger, 600, rgba(255,255,255,0.7));
+        letter-spacing: 0.2em;
+        border-bottom: 4px solid rgba(0,0,0,0);
+        padding:16px 0.5em 12px 0.5em;
+        width: fit-content;
+        transition:0.2s;
+        cursor: pointer;
+        margin: auto;
+        &:hover{
+            color: $white;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+}
