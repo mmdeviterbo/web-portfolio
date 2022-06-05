@@ -51,7 +51,7 @@ const projectValues: ProjectArg[] = [
     tags:'Library System, Books, Publication',
     title: 'Analytica: Online Library System',
     learning: analyticaLearning,
-    link:'https://deviterbo-library.netlify.app/'
+    link:'https://analytica-library.vercel.app'
   },
   {
     tags:'Healthcare, COVID-19, Laboratory Tests',
