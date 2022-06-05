@@ -7,6 +7,8 @@ import ImageContainer from '../_commons/ImageContainer'
 import { informationTechStack as techStack, otherTechStack } from './../Information/values'
 import { PROJECT_TYPE, ProjectArg } from './projectValues'
 import PROJECT_VALUES from './projectValues'
+import IconButton from '@material-ui/core/IconButton';
+import ClearIcon from '@material-ui/icons/Clear';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & { children?: ReactElement },
@@ -84,9 +86,11 @@ const ProjectDialog=({
       TransitionComponent={Transition}
       >
         <Container maxWidth={false} className="project-detial-container">
-          <div className="exit-button-container" onClick={()=>handleDialog()}>
-            <i className="fa fa-times"/>
-          </div>
+            <IconButton 
+              className="exit-button-container" onClick={()=>handleDialog()}
+              >
+              <ClearIcon />
+            </IconButton>
           <Container maxWidth={'md'} className="project-inner-container">
             <p className="project-description-sub">{project?.tags}</p>
             <p className="project-description-title">{project?.title}</p>

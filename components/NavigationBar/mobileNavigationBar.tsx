@@ -6,6 +6,8 @@ import Dialog from '@material-ui/core/Dialog';
 import { TransitionProps } from '@material-ui/core/transitions';
 import Slide from '@material-ui/core/Slide';
 import { Container } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
+import ClearIcon from '@material-ui/icons/Clear';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -32,9 +34,11 @@ export default function MobileNavigationBar({
         onClose={()=>setOpenMenu(!openMenu)}
         TransitionComponent={Transition}
       >
-        <div className="exit-button-container" onClick={()=>setOpenMenu(!openMenu)}>
-          <i className="fa fa-times"/>
-        </div>
+        <IconButton 
+          className="exit-button-container" onClick={()=>setOpenMenu(false)}
+          >
+          <ClearIcon />
+        </IconButton>
         <Container maxWidth={false} className="mobile-nav-dialog">
           <p className="contact" 
               onClick={()=>{

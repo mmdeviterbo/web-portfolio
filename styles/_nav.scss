@@ -44,12 +44,9 @@
             @include flex-guide(center,center, row);
             border: 1px solid white;
             border-radius: 50%;
-            padding:17px 18px;
             transition:0.2s;
             cursor:pointer;
-            i{
-                color:$white;
-            }
+            color:$white;
             display: none;
             @media (max-width : $tablet){
                 display: block;

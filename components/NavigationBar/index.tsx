@@ -3,6 +3,9 @@ import Image from 'next/image';
 import logo from './../../public/assets/logo.png'
 import ContactDialog from './contactDialog';
 import MobileNavigationBar from './mobileNavigationBar';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+
 export default function Nav() : ReactElement {
     const [open, setOpen] = useState(false)
     
@@ -35,10 +38,12 @@ export default function Nav() : ReactElement {
                     <a className="contact" onClick={()=>setOpen(true)}>
                         CONTACT
                     </a>
-                    
-                    <div className="menu-icon-container" onClick={()=>setOpenMenu(true)}>
-                        <i className="fa fa-lg fa-bars"/>
-                    </div>
+
+                    <IconButton 
+                        className="menu-icon-container" onClick={()=>setOpenMenu(true)}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                 </div>
             </div>
             <ContactDialog open={open} setOpen={setOpen}/>

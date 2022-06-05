@@ -120,6 +120,7 @@
 
 
 .project-detial-container{
+    position: relative;
     min-height: 100vh;
     background: $primary;
     overflow-y: auto;
@@ -130,20 +131,16 @@
 }
 
 .exit-button-container{
-    position: absolute;
-    padding:18px 22px;
+    position: absolute !important;
+    top: 1em !important;
+    right: 2em !important;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid white !important;
     cursor:pointer;
-    .fa-times{
-        color: $white;
-    }
-    top:4%;
-    right:4%;
-
+    color: $white !important;
     &:hover{
-        border: 1px solid $secondary;
-        background: $secondary;
+        border: 1px solid $secondary !important;
+        background: $secondary !important;
     }
 }
 
