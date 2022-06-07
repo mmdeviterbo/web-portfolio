@@ -17,8 +17,8 @@ export default function HomeTitle(): ReactElement {
                         scrollTrigger: {
                             trigger: `.web-products`,
                             toggleActions: "restart pause reverse pause",
-                            start: "0% 45%",
-                            end: "12% 38%",
+                            start: "0% 42%",
+                            end: "12% 35%",
                             scrub: true,
                         },
                         y:-20,
@@ -53,8 +53,8 @@ export default function HomeTitle(): ReactElement {
                         scrollTrigger: {
                             trigger: `.web-products`,
                             toggleActions: "restart pause reverse pause",
-                            start: "0% 45%",
-                            end: "12% 38%",
+                            start: "0% 42%",
+                            end: "12% 35%",
                             scrub: true,
                         },
                         rotateY: -90,
@@ -80,9 +80,10 @@ export default function HomeTitle(): ReactElement {
                     scrollTrigger: {
                         trigger: `.web-products`,
                         toggleActions: "restart pause reverse pause",
-                        start: "0% 45%",
-                        end: "12% 38%",
+                        start: "0% 42%",
+                        end: "12% 35%",
                         scrub: true,
+                        markers: true
                     },
                     y:-10,
                     opacity: 0,
