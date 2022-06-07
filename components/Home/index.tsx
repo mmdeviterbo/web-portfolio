@@ -80,9 +80,10 @@ export default function HomeTitle(): ReactElement {
                     scrollTrigger: {
                         trigger: `.web-products`,
                         toggleActions: "restart pause reverse pause",
-                        start: "0% 42%",
-                        end: "12% 35%",
+                        start: "0 300px",
+                        end: "0 35%",
                         scrub: true,
+                        markers: true
                     },
                     y:-10,
                     opacity: 0,
