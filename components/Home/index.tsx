@@ -83,7 +83,6 @@ export default function HomeTitle(): ReactElement {
                         start: "0% 42%",
                         end: "12% 35%",
                         scrub: true,
-                        markers: true
                     },
                     y:-10,
                     opacity: 0,
