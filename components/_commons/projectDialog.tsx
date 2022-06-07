@@ -22,10 +22,11 @@ export const techStacks=(projectType: PROJECT_TYPE): ReactElement =>{
     return(
       <>
         <ImageContainer imageSrc={techStack[0].value[1].icon} caption={techStack[0].value[1].title}/>
+        <ImageContainer imageSrc={techStack[0].value[0].icon} caption={techStack[0].value[0].title}/>
         <ImageContainer imageSrc={techStack[1].value[2].icon} caption={techStack[1].value[2].title}/>
         <ImageContainer imageSrc={techStack[1].value[0].icon} caption={techStack[1].value[0].title}/>
         <ImageContainer imageSrc={techStack[2].value[0].icon} caption={techStack[2].value[0].title}/>
-        <ImageContainer imageSrc={otherTechStack[0].value[3].icon} caption={otherTechStack[0].value[3].title}/>
+        {/* <ImageContainer imageSrc={otherTechStack[0].value[3].icon} caption={otherTechStack[0].value[3].title}/> */}
       </>
     )  
   }else if(projectType === PROJECT_TYPE.ANALYTICA){
@@ -42,6 +43,7 @@ export const techStacks=(projectType: PROJECT_TYPE): ReactElement =>{
     return(
       <>
         <ImageContainer imageSrc={techStack[0].value[1].icon} caption={techStack[0].value[1].title}/>
+        <ImageContainer imageSrc={techStack[0].value[0].icon} caption={techStack[0].value[0].title}/>
         <ImageContainer imageSrc={techStack[1].value[2].icon} caption={techStack[1].value[2].title}/>
         <ImageContainer imageSrc={techStack[1].value[0].icon} caption={techStack[1].value[0].title}/>
         <ImageContainer imageSrc={techStack[2].value[0].icon} caption={techStack[2].value[0].title}/>
@@ -51,6 +53,7 @@ export const techStacks=(projectType: PROJECT_TYPE): ReactElement =>{
     return(
       <>
         <ImageContainer imageSrc={otherTechStack[0].value[1].icon} caption={otherTechStack[0].value[1].title}/>
+        <ImageContainer imageSrc={techStack[0].value[0].icon} caption={techStack[0].value[0].title}/>
         <ImageContainer imageSrc={techStack[0].value[1].icon} caption={techStack[0].value[1].title}/>
         <ImageContainer imageSrc={otherTechStack[0].value[0].icon} caption={otherTechStack[0].value[0].title}/>
       </>
