@@ -27,7 +27,8 @@
     }
 }
 .web-products{
-    opacity: 0;
+    @include font-style($font-family, $font-size-main, 600, $accent);
+    transition: 0.1s;
 }
 
 
