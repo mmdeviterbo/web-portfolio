@@ -11,23 +11,23 @@ export default function HomeTitle(): ReactElement {
 
     useEffect(()=>{
         for(let i=0;i<TITLE_1.length;i++){
-            if(window.innerWidth>=770){
-                if(!(i>=2 && i<=5)){
-                    gsap.to(`.animate-text-1-${i}`,{
-                        scrollTrigger: {
-                            trigger: `.web-products`,
-                            toggleActions: "restart pause reverse pause",
-                            start: "0% 42%",
-                            end: "12% 35%",
-                            scrub: true,
-                        },
-                        y:-20,
-                        rotateY: -90,
-                        opacity: 0,
-                        scale: 0.3
-                    })
-                }
-            }
+            // if(window.innerWidth>=770){
+            //     if(!(i>=2 && i<=5)){
+            //         gsap.to(`.animate-text-1-${i}`,{
+            //             scrollTrigger: {
+            //                 trigger: `.web-products`,
+            //                 toggleActions: "restart pause reverse pause",
+            //                 start: "0% 42%",
+            //                 end: "12% 35%",
+            //                 scrub: true,
+            //             },
+            //             y:-20,
+            //             rotateY: -90,
+            //             opacity: 0,
+            //             scale: 0.3
+            //         })
+            //     }
+            // }
 
             const TITLE_1_ELEM = document.querySelector(`.animate-text-1-${i}`)
             const hover_1 = gsap.to(TITLE_1_ELEM, {
@@ -46,25 +46,25 @@ export default function HomeTitle(): ReactElement {
             })
         }
 
-        for(let i=0;i<TITLE_2.length;i++){
-            if(window.innerWidth>=770){
-                if(i!==7 && i!==8){
-                    gsap.to(`.dev-of-${i}`,{
-                        scrollTrigger: {
-                            trigger: `.web-products`,
-                            toggleActions: "restart pause reverse pause",
-                            start: "0% 42%",
-                            end: "12% 35%",
-                            scrub: true,
-                        },
-                        rotateY: -90,
-                        y:-20,
-                        opacity: 0,
-                        scale: 0.3
-                    })
-                }
-            }   
-        }
+        // for(let i=0;i<TITLE_2.length;i++){
+        //     if(window.innerWidth>=770){
+        //         if(i!==7 && i!==8){
+        //             gsap.to(`.dev-of-${i}`,{
+        //                 scrollTrigger: {
+        //                     trigger: `.web-products`,
+        //                     toggleActions: "restart pause reverse pause",
+        //                     start: "0% 42%",
+        //                     end: "12% 35%",
+        //                     scrub: true,
+        //                 },
+        //                 rotateY: -90,
+        //                 y:-20,
+        //                 opacity: 0,
+        //                 scale: 0.3
+        //             })
+        //         }
+        //     }   
+        // }
 
 
         gsap.from(`.dev-of`,{
@@ -74,22 +74,22 @@ export default function HomeTitle(): ReactElement {
             delay: 0.10
         })
 
-        for(let i=0;i<TITLE_3.length;i++){
-            if(window.innerWidth>=770){
-                gsap.to(`.web-products`,{
-                    scrollTrigger: {
-                        trigger: `.web-products`,
-                        toggleActions: "restart pause reverse pause",
-                        start: "0 300px",
-                        end: "0 35%",
-                        scrub: true,
-                    },
-                    y:-10,
-                    opacity: 0,
-                    scale: 0.2
-                })
-            }
-        }
+        // for(let i=0;i<TITLE_3.length;i++){
+        //     if(window.innerWidth>=770){
+        //         gsap.to(`.web-products`,{
+        //             scrollTrigger: {
+        //                 trigger: `.web-products`,
+        //                 toggleActions: "restart pause reverse pause",
+        //                 start: "0 300px",
+        //                 end: "0 35%",
+        //                 scrub: true,
+        //             },
+        //             y:-10,
+        //             opacity: 0,
+        //             scale: 0.2
+        //         })
+        //     }
+        // }
 
         gsap.from(`.web-products`,{
             opacity: 0,
