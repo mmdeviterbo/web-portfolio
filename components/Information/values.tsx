@@ -74,9 +74,11 @@ export const informationTechStack: InformationTechStackArgs[] = [
   { 
     title : 'Backend',
     value : [ 
-        { title : 'NodeJS', icon : nodeJSIcon }, 
         { title : 'Typescript', icon : typescriptIcon } ,
+        { title : 'NodeJS', icon : nodeJSIcon }, 
         { title : 'GraphQl', icon : apollographqlIcon } ,
+        { title : 'REST', icon : restIcon } ,
+
     ]
   },
   { 
@@ -104,7 +106,7 @@ export const otherTechStack: InformationTechStackArgs[] = [
     value : [ 
         { title : 'Chakra', icon : chakraIcon },    //0
         { title : 'Figma', icon : figmaIcon },      //1
-        { title : 'REST API', icon : restIcon },    //2
+        { title : 'REST', icon : restIcon },    //2
         { title: 'Material', icon: materialIcon},   //3
         { title: 'LinkedIn', icon: linkedinIcon},   //4
         { title: 'GitHub', icon:githubIcon},        //5
